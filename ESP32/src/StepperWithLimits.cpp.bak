@@ -71,7 +71,7 @@ StepperWithLimits::StepperWithLimits(uint8_t pinStep, uint8_t pinDirection, bool
 	// pinMode(pinMax, INPUT);
 
 	Serial.printf("InvertStepperDir: %d\n", invertMotorDir_b);
-	_stepper = stepperEngine().stepperConnectToPin(pinStep, DRIVER_RMT);	
+	_stepper = stepperEngine().stepperConnectToPin(pinStep);	
 
 	_stepper->setDirectionPin(pinDirection, invertMotorDir_b);
     _stepper->setAutoEnable(true);
